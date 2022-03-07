@@ -1,25 +1,28 @@
 import React, { Component } from 'react'
-import { Link,Route} from 'react-router-dom'
+import { NavLink,Route,Switch} from 'react-router-dom'
 import  About from '../About'
 import  Home from '../Home'
+import  MyNavLink from '../MyNavLink'
 
 
 export default class index extends Component {
   render() {
     return (
       <div>
-        
-          <Link to="/about"> <div style={{width:"60px"}} >About</div></Link>
-          <Link to="/home"> <div style={{width:"60px"}}>Home</div></Link>
+          <MyNavLink activeClassName=''  children="ABout"  to="/about"/> 
+          <MyNavLink  activeClassName='' children="Home" to="/home"/>
           <div style={{float:"right"}}> 
-          <Route path="/about" component={About}/>
-          <Route path="/home" component={Home}/>
-          </div>
-         
 
+         
+          <Switch>
+            <Route path="/about" component={About}/>
+            <Route path="/home" component={Home}/>
+          </Switch>  
+        
+        
+          </div>
        
 
-        
       </div>
     )
   }
