@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link,Route,Switch } from 'react-router-dom'
 import Details  from './Details'
 
+
 export default class index extends Component {
 
   state = {data:[
@@ -21,13 +22,12 @@ export default class index extends Component {
               data.map(item=>{
                 return (
                   <li key={item.id}>
-                  <Link    children={item.content}  to={`/about/news/details/${item.id}/${item.content}`}></Link>
-                
+                     <Link    children={item.content}  to={{pathname:`/about/news/details`,state:{id:item.id,content:item.content}}}></Link>
                   </li>
                 )
               })
            }
-            <Route path="/about/news/details/:id/:content" component={Details}/>
+            <Route path="/about/news/details" component={Details}/>
          </div>
     )
   }

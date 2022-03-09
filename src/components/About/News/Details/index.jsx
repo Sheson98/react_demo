@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-
+import qs from 'qs'
 
 
 export default class details extends Component {
     render() {
-        const {match:{params:data}} = this.props
+        const {id,content} = this.props.location.state
+        
+        
         return (
         <div>
           {
-              data.content
+              content
           }
         </div>
         )
