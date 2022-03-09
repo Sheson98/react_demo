@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin: 0 auto;
+  width: 600px;
+  padding: 0;
+
+}
+.container .search{
+  padding-left: 100px;
+  background-color: antiquewhite;
+}
+.container .list{
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.container .list .card img{
+  width: 180px;
+  align-self: center;
+}
+.card{
+  margin-top: 20px;
+}
