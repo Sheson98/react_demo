@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-
 import 'element-theme-default';
 import './App.css'
 import Search from './components/Search'
