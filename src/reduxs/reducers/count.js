@@ -1,4 +1,4 @@
-export default  function reducer(preState =0,action){
+export default  function count(preState =0,action){
     const {type,data} = action
     switch(type){
         case "increment":

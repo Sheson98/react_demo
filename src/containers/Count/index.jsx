@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {createIncrementAction} from '../../redux/count_action'
+import {Increment} from '../../reduxs/actions/count'
 import {connect} from 'react-redux'
 
  class Count extends Component {
@@ -17,9 +17,10 @@ import {connect} from 'react-redux'
   }
 }
 export default connect(
+  
   state=>({
-  sum:state
+  sum:state.count
 }),
 {
-  jiafa:createIncrementAction
+  jiafa:Increment
 })(Count) 
